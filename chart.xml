@@ -1,0 +1,128 @@
+<mxfile host="app.diagrams.net" modified="2024-01-06T00:00:00.000Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36" etag="123" version="21.6.6">
+  <diagram id="ticket-system-flow" name="Ticket System Flow">
+    <mxGraphModel dx="1422" dy="798" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- Previous nodes remain the same up to daily ticket flow -->
+        
+        <!-- Select Process after regular ticket info -->
+        <mxCell id="select_process_1" value="Select Process" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1180" y="440" width="120" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Create New Ticket Decision 1 -->
+        <mxCell id="create_ticket_decision_1" value="Create&#xa;New Ticket?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1340" y="430" width="100" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- Select Process after PLUS ticket -->
+        <mxCell id="select_process_2" value="Select Process" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1180" y="520" width="120" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Create New Ticket Decision 2 -->
+        <mxCell id="create_ticket_decision_2" value="Create&#xa;New Ticket?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1200" y="620" width="100" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- Display Dialog Form -->
+        <mxCell id="display_dialog" value="Display Dialog&#xa;Form" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1340" y="630" width="120" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Enter Ticket Details -->
+        <mxCell id="enter_details" value="Enter Ticket&#xa;Details By MS PIC" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1500" y="630" width="120" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Show Pending Ticket Decision -->
+        <mxCell id="pending_ticket" value="Show&#xa;Pending&#xa;Ticket?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1200" y="740" width="100" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- Enter Date Range -->
+        <mxCell id="enter_dates" value="Enter Start Date&#xa;and End Date" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1340" y="750" width="120" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Display Pending Details -->
+        <mxCell id="display_pending" value="Display All Pending&#xa;Ticket Details" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1500" y="750" width="120" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Search Ticket Decision -->
+        <mxCell id="search_ticket" value="Search&#xa;Ticket by Input&#xa;Text?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1200" y="860" width="100" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- Enter Search Details -->
+        <mxCell id="enter_search" value="Enter Ticket&#xa;Details" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1340" y="870" width="120" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Display Search Results -->
+        <mxCell id="display_results" value="Display All Ticket&#xa;Related With Input&#xa;Text" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1500" y="870" width="120" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Connections -->
+        <!-- Connect Select Process to Create New Ticket -->
+        <mxCell id="conn_process_1" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;rounded=0;" edge="1" parent="1" source="select_process_1" target="create_ticket_decision_1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Connect Create Ticket to Dialog -->
+        <mxCell id="conn_create_1" value="Yes" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;rounded=0;" edge="1" parent="1" source="create_ticket_decision_2" target="display_dialog">
+          <mxGeometry width="50" height="50" relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Connect Dialog to Details -->
+        <mxCell id="conn_dialog_1" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;rounded=0;" edge="1" parent="1" source="display_dialog" target="enter_details">
+          <mxGeometry width="50" height="50" relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Connect to Pending Flow -->
+        <mxCell id="conn_pending_1" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" edge="1" parent="1" source="create_ticket_decision_2" target="pending_ticket">
+          <mxGeometry width="50" height="50" relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Connect Pending to Dates -->
+        <mxCell id="conn_pending_2" value="Yes" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;rounded=0;" edge="1" parent="1" source="pending_ticket" target="enter_dates">
+          <mxGeometry width="50" height="50" relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Connect Dates to Display -->
+        <mxCell id="conn_dates_1" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;rounded=0;" edge="1" parent="1" source="enter_dates" target="display_pending">
+          <mxGeometry width="50" height="50" relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Connect to Search Flow -->
+        <mxCell id="conn_search_1" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" edge="1" parent="1" source="pending_ticket" target="search_ticket">
+          <mxGeometry width="50" height="50" relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Connect Search to Details -->
+        <mxCell id="conn_search_2" value="Yes" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;rounded=0;" edge="1" parent="1" source="search_ticket" target="enter_search">
+          <mxGeometry width="50" height="50" relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Connect Details to Results -->
+        <mxCell id="conn_search_3" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;rounded=0;" edge="1" parent="1" source="enter_search" target="display_results">
+          <mxGeometry width="50" height="50" relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Add return arrow from Enter Details back to Select Process -->
+        <mxCell id="conn_return_1" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=0;entryX=1;entryY=0.5;curved=1;" edge="1" parent="1" source="enter_details" target="select_process_2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1560" y="550"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
